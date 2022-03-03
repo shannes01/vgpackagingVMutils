@@ -1,0 +1,10 @@
+[controller]
+control ansible_connection=local
+
+[loadbalancer]
+10.1.248.70 ansible_user=lb01
+
+[webserver]
+10.1.249.104 ansible_user=app01
+10.1.249.116 ansible_user=shannes
+

@@ -1,0 +1,16 @@
+---
+
+user1:
+  name: hans
+  password: morning
+  FriendList:
+    -robert
+    -martins
+user2:
+  name: daan
+  password: crazy
+  FriendList:
+    -leuren
+    -lina
+
+...

@@ -1,0 +1,8 @@
+---
+
+
+- name: Hallo world run
+  debug:
+    msg: "hello world has run"
+
+...

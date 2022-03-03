@@ -1,0 +1,22 @@
+---
+
+- hosts: all
+  become: true
+  roles:
+    - ListFiles
+
+- hosts: webserver
+  become: true
+  roles:
+    - InstallApache
+    - AddBasicHTMLFolder
+
+- hosts: loadbalancer
+  become: true
+  roles:
+    - Installnginx
+
+
+
+
+...

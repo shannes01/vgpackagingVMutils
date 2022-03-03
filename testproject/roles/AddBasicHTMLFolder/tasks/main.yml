@@ -1,0 +1,12 @@
+---
+
+- name: set up index.html for first web server
+  copy: 
+    content: "<html>
+      <header><title>Welcome to the Server</title></header>
+      <body>Hello from the Server {{ ansible_default_ipv4.address }} !</body></html>" 
+    dest: /var/www/html/index.html 
+    mode: 0644
+  notify: restart apache2
+
+...

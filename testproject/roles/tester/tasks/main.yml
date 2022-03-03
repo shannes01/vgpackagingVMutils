@@ -1,0 +1,6 @@
+---
+
+- name: Hallo world
+  command: echo {{ user1, user2 }}
+  
+...

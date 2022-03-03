@@ -1,0 +1,14 @@
+---
+
+- name: install apache
+  apt: 
+    name: apache2 
+    state: latest
+
+- name: deleted index.html
+  file:  
+    path: /var/www/html/index.html 
+    state: absent
+  notify: restart apache2
+
+...
