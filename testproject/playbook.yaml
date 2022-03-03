@@ -4,19 +4,23 @@
   become: true
   roles:
     - ListFiles
+    - UpdateRepo
 
+- hosts: webserver
+  gather_facts: false
+  become: true
+  roles:
+    - AddFilesFromGit
+    
 - hosts: webserver
   become: true
   roles:
-    - InstallApache
     - AddBasicHTMLFolder
+    - InstallApache
 
 - hosts: loadbalancer
   become: true
   roles:
     - Installnginx
-
-
-
 
 ...
